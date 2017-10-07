@@ -59,15 +59,9 @@ RSpec.configure do |config|
   config.include ControllerSpecHelper
   config.include RequestSpecHelper
 
-  config.before(:suite) do
+  config.before(:each) do
     DatabaseCleaner.clean_with(:truncation)
     DatabaseCleaner.strategy = :transaction
-  end
-
-  config.around(:each) do |example|
-    DatabaseCleaner.cleaning do
-      example.run
-    end
   end
 end
 

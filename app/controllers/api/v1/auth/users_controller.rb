@@ -1,4 +1,5 @@
 class Api::V1::Auth::UsersController < ApplicationController
+  skip_before_action :authorize_request
 
   def create
     User.create!(user_params)

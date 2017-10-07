@@ -7,4 +7,8 @@ RSpec.describe User, type: :model do
     it { should validate_presence_of(:password).on(:create) }
     it { should validate_presence_of(:password_confirmation).on(:create) }
   end
+
+  describe 'associations' do
+    it { should have_many(:posts).with_foreign_key(:author_id) }
+  end
 end
