@@ -1,8 +1,4 @@
 class Message
-  def self.not_found(record = 'record')
-    "Sorry, #{record} not found."
-  end
-
   def self.invalid_credentials
     'Invalid email / password'
   end
@@ -15,16 +11,8 @@ class Message
     'Missing token'
   end
 
-  def self.unauthorized
-    'Unauthorized request'
-  end
-
   def self.account_created
     'Account created successfully'
-  end
-
-  def self.account_not_created
-    'Account could not be created'
   end
 
   def self.expired_token

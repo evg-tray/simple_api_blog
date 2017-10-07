@@ -9,7 +9,7 @@ RSpec.describe 'Posts API', type: :request do
     context 'without pagination params' do
       before { get '/api/v1/posts', headers: headers }
 
-      it 'returns posts ordered by published_at' do
+      it 'returns posts ordered by published_at desc' do
         expect(json).not_to be_empty
         expect(json.size).to eq(5)
         expect(json.map{ |i| i['id'] }).to eq posts.sort_by { |i| i['published_at'] }.reverse.map(&:id)[0..4]

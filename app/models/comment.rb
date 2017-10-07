@@ -1,11 +1,11 @@
-class Post < ApplicationRecord
+class Comment < ApplicationRecord
   belongs_to :author, class_name: 'User'
-  has_many :comments
+  belongs_to :post
 
-  validates :title, :body, :author, :published_at, presence: true
+  validates :body, presence: true
   before_validation :set_published_at
 
-  default_scope ->{ order(published_at: :desc) }
+  default_scope ->{ order(published_at: :asc) }
 
   private
 

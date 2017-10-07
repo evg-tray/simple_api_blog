@@ -10,5 +10,6 @@ RSpec.describe User, type: :model do
 
   describe 'associations' do
     it { should have_many(:posts).with_foreign_key(:author_id) }
+    it { should have_many(:comments) }
   end
 end
