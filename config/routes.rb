@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       resources :posts, only: [:create, :show, :index] do
         resources :comments, only: [:create, :show, :index]
       end
+      post 'reports/by_author', to: 'reports#by_author'
     end
   end
 

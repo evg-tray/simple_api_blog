@@ -28,6 +28,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'jwt'
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'kaminari'
+gem 'sidekiq'
+gem 'slim-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -36,6 +38,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'letter_opener'
 end
 
 group :development do

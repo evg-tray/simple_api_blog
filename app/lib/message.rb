@@ -18,4 +18,12 @@ class Message
   def self.expired_token
     'Sorry, your token has expired. Please login to continue.'
   end
+
+  def self.report_started
+    'Report generation started'
+  end
+
+  def self.invalid_params
+    'Invalid params.'
+  end
 end

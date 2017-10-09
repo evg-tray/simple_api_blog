@@ -1,0 +1,19 @@
+h3
+  = "Report by author form #{@start_date} to #{@end_date}"
+table border="1"
+  thead
+    th Nickname
+    th Email
+    th Posts
+    th Comments
+  tbody
+    - @data.each do |row|
+      tr
+        td
+          = row.nickname
+        td
+          = row.email
+        td
+          = row.posts_count
+        td
+          = row.comments_count
