@@ -18,7 +18,7 @@ class ReportByAuthorJob < ApplicationJob
         GROUP BY
           users.id
         HAVING COUNT(distinct posts.id) > 0 OR COUNT(distinct comments.id) > 0"
-    ).sort { |i| i.posts_count + i.comments_count / 10 }.reverse
+    ).sort_by! { |i| i.posts_count * 10 + i.comments_count }
     ReportByAuthorMailer.send_report(start_date, end_date, email, data).deliver_now
   end
 end
