@@ -1,4 +1,4 @@
-class Api::V1::ReportsController < ApplicationController
+class Api::V1::ReportsController < ApiApplicationController
 
   def by_author
     if params[:start_date] && params[:end_date] && params[:email]

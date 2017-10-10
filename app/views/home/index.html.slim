@@ -1,0 +1,19 @@
+.container
+  br
+  br
+  form#auth-form
+    .form-group
+      label for="email" Email
+      input.form-control type="text" id="email" name="email"
+    .form-group
+      label for="password" Password
+      input.form-control type="password" id="password" name="password"
+    input#token type="hidden"
+  form#avatar-form
+    .form-group
+      label for="uploadAvatar" Avatar
+      input.form-control type="file" id="uploadAvatar" name="avatar"
+    .form-group
+      button.btn.btn-primary#upload_avatar type="submit" Upload
+  img#uploaded_avatar
+  h4#error

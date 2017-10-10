@@ -1,4 +1,4 @@
-class Api::V1::PostsController < ApplicationController
+class Api::V1::PostsController < ApiApplicationController
   skip_before_action :authorize_request, only: [:show, :index]
   set_pagination_headers :posts, only: [:index]
 

@@ -1,4 +1,4 @@
-class Api::V1::CommentsController < ApplicationController
+class Api::V1::CommentsController < ApiApplicationController
   skip_before_action :authorize_request, only: [:show, :index]
   set_pagination_headers :comments, only: [:index]
   before_action :load_post
