@@ -1,13 +1,3 @@
-get_token = ->
-  $.ajax({
-    type: "POST"
-    url: '/api/v1/auth/login'
-    data: { email: $('#email').val(), password: $('#password').val() }
-    dataType: 'json'
-    success: (data) ->
-      $('#token').val(data['auth_token'])
-  })
-
 upload_avatar = (event) ->
   event.preventDefault()
   $.ajax({
